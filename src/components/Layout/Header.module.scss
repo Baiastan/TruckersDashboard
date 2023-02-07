@@ -1,0 +1,99 @@
+@import "../../lib/style-utils";
+
+.header {
+  background-color: $primaryHeaderColor;
+  //background-image: linear-gradient($primaryHeaderColor, black);
+  display: flex;
+  justify-content: flex-start;
+  min-width: 1360px;
+
+  padding: 0 100px;
+  align-items: center;
+  height: 4rem;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.navigation a:hover {
+  border-bottom: 1px solid (126 170 225);
+  color: rgb(186, 212, 244);
+  padding-bottom: 5px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: $colorHeaderNavigationLinks;
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.navigation .activeLink {
+  border-bottom: 1px solid rgb(126 170 225);
+  padding-bottom: 5px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 750px) {
+  .header {
+    padding: 20px;
+    //border: 1px solid red;
+
+    h1 {
+      font-size: 18px;
+    }
+  }
+  .navigation {
+    font-size: 16px;
+  }
+  .navigation li a {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header {
+    min-width: 550px;
+  }
+  //need to work navigation part
+}
+
+// .positive {
+//   color: black;
+//   background-color: $primaryBgColorPositive;
+//   .navigation a {
+//     color: black;
+
+//     &:hover {
+//       border-bottom: 2px solid black;
+//     }
+//   }
+//   .navigation .activeLink {
+//     border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+//   }
+// }
+
+.login,
+.logout {
+  @include primaryButtonStyle();
+  width: 100px;
+}
+
+.login:hover,
+.logout:hover {
+  cursor: pointer;
+}
+
+.header button:active {
+  cursor: pointer;
+}

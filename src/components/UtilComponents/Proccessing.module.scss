@@ -1,0 +1,27 @@
+@import "../../lib/style-utils";
+
+.proccessing {
+  background-color: green;
+  border-radius: 15px;
+  animation-name: proccess;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+.proccessing-container {
+  border: 1px solid $greyColor;
+  border-radius: 15px;
+  height: 10px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes proccess {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../../lib/style-utils";
+
+.form-checkbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-radio-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+.fixed-expense-form {
+  box-shadow: $boxShadowParams;
+  max-width: 350px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    border: $borderGreyColor;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.button {
+  @include primaryButtonStyle();
+}
+
+.proccessing {
+  background-color: green;
+  border-radius: 15px;
+  animation-name: proccess;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.proccessing-container {
+  border: 1px solid $greyColor;
+  border-radius: 15px;
+  height: 10px;
+  margin-top: -10px;
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes proccess {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 100%;
+  }
+}

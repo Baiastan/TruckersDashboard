@@ -1,0 +1,11 @@
+@import "../../../lib/style-utils";
+
+.expense_item {
+  background-color: $colorBackgroundLight;
+  position: relative;
+}
+
+.expense_item:hover {
+  filter: brightness(1.4);
+  cursor: pointer;
+}

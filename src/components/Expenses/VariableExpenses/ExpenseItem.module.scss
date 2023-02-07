@@ -1,0 +1,34 @@
+@import "../../../lib/style-utils";
+
+.expense_item {
+  background-color: $colorBackgroundLight;
+}
+
+.expense_item:hover {
+  filter: brightness(1.4);
+  cursor: pointer;
+}
+
+// .expense_item:before {
+//   content: attr(title);
+//   position: absolute;
+//   left: 50%;
+//   top: -10px;
+//   display: none;
+// }
+
+// .expense_item:hover::before {
+//   width: 150px;
+//   display: block;
+//   color: $textGreyColor;
+//   border-radius: 4px;
+//   border: 1px solid rgb(145, 145, 145);
+//   padding: 5px;
+//   background-color: $colorBackgroundDark;
+// }
+
+// .expense_item:hover {
+//   z-index: 10;
+//   font-size: 15px;
+//   position: relative;
+// }

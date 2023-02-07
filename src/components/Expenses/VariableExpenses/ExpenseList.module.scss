@@ -1,0 +1,123 @@
+@import "../../../lib/style-utils";
+
+.var_expenses_container {
+  // border: 1px solid green;
+  width: 300px;
+  .scroll_table {
+    overflow: scroll;
+    height: 42vh;
+    background-color: $colorBackgroundLight;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    background-color: $colorBackgroundLight;
+    height: 3rem;
+    transition: filter 300ms;
+
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+
+    button {
+      background-color: $colorBackgroundLight;
+      border: none;
+      color: white;
+      font-size: 17px;
+
+      &:hover {
+        color: $colorHeaderNavigationLinks;
+        cursor: pointer;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $colorBackgroundLight;
+    //transition: all 0.3s ease-out;
+
+    thead {
+      position: sticky;
+      top: 0px;
+      margin: 0 0 0 0;
+      background-color: rgb(61, 60, 60);
+
+      th {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+
+    td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    tr {
+      border-bottom: 1px solid $colorLineLoads;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .var_expenses_container {
+    width: 100%;
+
+    .header {
+      justify-content: flex-start;
+
+      button {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+// .fade {
+//   transition: all 0.3s ease-out;
+// }
+
+// .fade-slide-enter {
+//   opacity: 0;
+// }
+
+// .fade-slide-enter-active {
+//   animation: slideDown 2s ease-out forwards;
+// }
+
+// .fade-slide-exit {
+//   opacity: 1;
+// }
+
+// .fade-slide-exit-active {
+//   animation: slideUp 2s ease-out forwards;
+// }
+
+// @keyframes slideDown {
+//   from {
+//     opacity: 0;
+//     transform: translateY(-100%);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// @keyframes slideUp {
+//   from {
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+
+//   to {
+//     opacity: 0;
+//     transform: translateY(-100%);
+//   }
+// }

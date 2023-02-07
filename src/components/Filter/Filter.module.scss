@@ -1,0 +1,206 @@
+@import "../../lib/style-utils";
+
+.monthly_wrapper {
+  //border: 1px solid red;
+  display: flex;
+
+  .controls {
+    //border: 1px solid green;
+    margin-right: 10px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+
+      label {
+        color: $textGreyColor;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+      }
+
+      select {
+        @include primarySelectStyle();
+        border-bottom: 1px solid $colorLineLoads;
+        padding: 3px 0px 3px 0px;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+.range_wrapper {
+  //border: 1px solid red;
+  margin-left: 10px;
+
+  form {
+    display: flex;
+    position: relative;
+    .controls {
+      //border: 1px solid green;
+      margin-right: 20px;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        label {
+          color: $textGreyColor;
+          font-size: 0.9rem;
+          margin-bottom: 5px;
+        }
+
+        input {
+          @include primarySelectStyle();
+          border-bottom: 1px solid $colorLineLoads;
+          padding: 3px 3px 3px 3px;
+          font-size: 1rem;
+        }
+      }
+    }
+    .btn_in_days {
+      height: 20px;
+      border: none;
+      background-color: transparent;
+      font-size: 25px;
+      position: absolute;
+      left: 100px;
+      bottom: 10px;
+
+      &:hover {
+        filter: brightness(1.2);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.form_in_range {
+  //border: 1px solid red;
+  position: relative;
+
+  .btn_in_range {
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    position: absolute;
+    right: -30px;
+    bottom: 10px;
+
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+  }
+}
+
+.btn_search_dates {
+  border: none;
+  height: 20px;
+  align-self: flex-end;
+  margin-left: 20px;
+  color: $colorSecondaryBtn;
+  font-size: 1rem;
+  background-color: transparent;
+
+  span {
+    margin-left: 5px;
+    font-size: 0.9rem;
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+  }
+}
+
+.weekly_wrapper {
+  // border: 1px solid red;
+  align-self: flex-end;
+  width: 350px;
+  display: flex;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    //border: 1px solid red;
+
+    label {
+      font-size: 14px;
+    }
+
+    select {
+      @include primarySelectStyle();
+      border-bottom: 1px solid $colorLineLoads;
+      padding: 03px 0px 3px 0px;
+      font-size: 1rem;
+      width: 140px;
+
+      //border: 1px solid red;
+    }
+  }
+}
+
+.all_data {
+  align-self: flex-end;
+  position: absolute;
+  right: 0px;
+  button {
+    align-self: flex-end;
+    margin: 0 10px 0 10px;
+    width: 80px;
+    border: none;
+    height: 20px;
+    align-self: flex-end;
+    margin-left: 20px;
+    color: $colorSecondaryBtn;
+    font-size: 1rem;
+    background-color: transparent;
+
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .range_wrapper {
+    margin-left: 0;
+  }
+
+  .btn_search_dates {
+    margin-bottom: 10px;
+    align-self: flex-start;
+  }
+
+  .weekly_wrapper {
+    align-self: center;
+
+    div {
+      flex-direction: column-reverse;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .monthly_wrapper {
+    margin: 15px 0 15px 0;
+    width: 300px;
+    .controls {
+      width: 100%;
+
+      div {
+        width: 100%;
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "../../lib/style-utils";
+
+.percent_form_container {
+  display: flex;
+  label {
+    margin-right: 10px;
+  }
+
+  input {
+    background-color: $colorBackgroundLight;
+    border: none;
+    font-size: 16px;
+
+    color: $textGreyColor;
+    border-bottom: 1px solid $colorLineLoads;
+    width: 50px;
+    &:active,
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  .text {
+    font-size: 16px;
+
+    color: tomato;
+    width: 70px;
+    &:hover {
+      cursor: pointer;
+      color: $colorHeaderNavigationLinks;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .percent_form_container {
+    flex-direction: row-reverse;
+    label {
+      align-self: flex-end;
+    }
+
+    .text {
+      align-self: flex-end;
+      text-align: left;
+    }
+  }
+}

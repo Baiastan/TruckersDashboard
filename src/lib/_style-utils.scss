@@ -1,0 +1,108 @@
+//variables
+
+//need to change here
+$textWhiteColor: white;
+$textGreyColor: lightgrey;
+$textNavigationColor: #7eaae1;
+
+$colorMoney: lightgreen;
+$colorBackgroundLight: rgb(68 66 68);
+$colorBackgroundDark: rgb(43 42 43);
+$colorLineLoads: rgb(103, 100, 105);
+
+$colorHeaderNavigationLinks: rgb(126 170 225);
+
+$primaryHeaderColor: rgb(30 29 31);
+
+$primaryBtnColor: #4470b6;
+$colorSecondaryBtn: rgb(126 170 225);
+$colorBtnHover: #1b62d4;
+
+$borderGreyColor: 1px solid $colorLineLoads;
+$greyColor: rgb(103, 100, 105);
+
+$boxShadowParams: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+@mixin allBorderButTop {
+  border-left: $borderGreyColor;
+  border-right: $borderGreyColor;
+  border-bottom: $borderGreyColor;
+}
+@mixin allBorderGrey {
+  border: $borderGreyColor;
+}
+
+@mixin primaryButtonStyle() {
+  cursor: pointer;
+  background-color: $primaryBtnColor;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background-color: $colorBtnHover;
+  }
+}
+
+@mixin primarySelectStyle() {
+  width: 100%;
+  color: $textGreyColor;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  padding: 5px 5px 5px 5px;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:active,
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+@mixin primaryButtonStyleColor($color, $hoverColor) {
+  cursor: pointer;
+  background-color: $color;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background-color: $hoverColor;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+// .className {
+//     @extend .otherClass;
+// // you can override here
+// }

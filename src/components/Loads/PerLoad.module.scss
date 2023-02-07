@@ -1,0 +1,50 @@
+@import "../../lib/style-utils";
+
+.transaction-list:last-child {
+  border: none;
+}
+
+.transaction-list {
+  border-bottom: 1px solid $colorLineLoads;
+  td {
+    padding: 12px;
+  }
+
+  .td_netpay {
+    color: $colorMoney;
+  }
+}
+
+.td_trash,
+.td_edit {
+  font-size: 12px;
+
+  i:hover {
+    color: $colorHeaderNavigationLinks;
+    cursor: pointer;
+  }
+}
+
+// ul {
+//   padding: 0;
+//   margin-top: 10px;
+// }
+
+// .transaction-list {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// //need to change
+// .transaction-list:hover {
+//   background-color: rgb(91, 88, 91);
+//   cursor: pointer;
+// }
+
+// .transaction-list:hover .delete-sign {
+//   display: inline;
+//   color: rgb(252, 170, 170);
+// }
+
+// .delete-sign {
+//   display: none;
+// }

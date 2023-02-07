@@ -1,0 +1,56 @@
+@import "../../lib/style-utils";
+
+.td_done {
+  font-size: 14px;
+
+  i:hover {
+    color: $colorHeaderNavigationLinks;
+    cursor: pointer;
+  }
+}
+
+.edit-view td {
+  padding: 12px;
+}
+
+.edit-view td input {
+  border: none;
+  height: 25px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  color: $textGreyColor;
+  background-color: $greyColor;
+
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+// ul {
+//   padding: 0;
+//   margin-top: 10px;
+// }
+
+// .transaction-list {
+//   display: flex;
+//   justify-content: space-between;
+// }
+// //need to change
+// .transaction-list:hover {
+//   background-color: rgb(91, 88, 91);
+//   cursor: pointer;
+// }
+
+// .transaction-list:hover .delete-sign {
+//   display: inline;
+//   color: rgb(252, 170, 170);
+// }
+
+// .delete-sign {
+//   display: none;
+// }

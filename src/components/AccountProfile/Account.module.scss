@@ -1,0 +1,18 @@
+@import "../../lib/style-utils";
+
+.account {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.account a {
+  @include primaryButtonStyle();
+  width: 180px;
+}
+
+.account h1 {
+  font-size: 3rem;
+  margin: 50px;
+}

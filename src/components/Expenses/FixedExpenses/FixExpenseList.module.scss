@@ -1,0 +1,76 @@
+@import "../../../lib/style-utils";
+
+.fix_expenses_container {
+  max-width: 300px;
+  min-width: 250px;
+
+  .scroll_table {
+    overflow: scroll;
+    height: 42vh;
+    background-color: $colorBackgroundLight;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    background-color: $colorBackgroundLight;
+    height: 3rem;
+    transition: filter 300ms;
+
+    &:hover {
+      filter: brightness(1.2);
+      cursor: pointer;
+    }
+
+    button {
+      background-color: $colorBackgroundLight;
+      border: none;
+      color: white;
+      font-size: 17px;
+
+      &:hover {
+        color: $colorHeaderNavigationLinks;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .slide_down table {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide_up table {
+    opacity: 0;
+    transform: translateY(-200%);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $colorBackgroundLight;
+    transition: all 0.3s ease-out;
+
+    thead {
+      position: sticky;
+      top: 0px;
+      margin: 0 0 0 0;
+      background-color: rgb(61, 60, 60);
+
+      th {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+
+    td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    tr {
+      border-bottom: 1px solid $colorLineLoads;
+    }
+  }
+}

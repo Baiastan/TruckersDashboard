@@ -1,0 +1,54 @@
+@import "../lib/style-utils";
+
+.main-page {
+  display: flex;
+  background-color: $colorBackgroundLight;
+  min-width: 1360px;
+}
+
+@media only screen and (max-width: 550px) {
+  .main-page {
+    display: block;
+    align-items: center;
+    min-width: 550px;
+
+    .left-nav {
+      width: 100%;
+      //width: 350px;
+    }
+
+    .right-nav {
+      background-color: $colorBackgroundDark;
+      width: 100%;
+    }
+  }
+
+  .main-page :nth-child(2) {
+    order: 1;
+  }
+  .main-page :nth-child(3) {
+    order: 3;
+  }
+  .main-page :nth-child(1) {
+    order: 2;
+  }
+}
+
+.left-nav {
+  flex: 1;
+  padding: 5px;
+  min-width: 300px;
+  width: 20%;
+  //width: 350px;
+}
+
+.right-nav {
+  background-color: $colorBackgroundDark;
+  width: 80%;
+}
+
+//right nav
+// .right-nav {
+//   padding: 5px;
+//   flex: 1;
+// }

@@ -1,0 +1,121 @@
+@import "../../lib/style-utils";
+
+.loads_header {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+.loads_header_left {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+  .total_miles,
+  .average_rate {
+    color: $colorHeaderNavigationLinks;
+  }
+
+  h3 {
+    color: tomato;
+    text-align: center;
+    margin-left: 15px;
+    font-weight: 550;
+    padding: 10px;
+  }
+}
+.loads_header_right {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.transactions_container {
+  //@include flexCenter();
+
+  width: 100%;
+  background-color: $colorBackgroundLight;
+  //display: flex;
+  .scroll_table {
+    overflow: scroll;
+    height: 35vh;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      position: sticky;
+      top: 0px;
+      margin: 0 0 0 0;
+      text-align: left;
+      background-color: $colorBackgroundLight;
+
+      th {
+        padding: 12px;
+      }
+    }
+
+    .td_miles {
+      width: 10%;
+    }
+    .td_rate {
+      width: 7%;
+    }
+
+    .td_amount {
+      width: 8%;
+    }
+
+    .td_note {
+      width: 15%;
+    }
+
+    .td_date {
+      width: 10%;
+    }
+
+    .td_from {
+      width: 15%;
+    }
+
+    .td_to {
+      width: 15%;
+    }
+
+    .td_trash,
+    .td_edit {
+      width: 2.5%;
+      font-size: 13px;
+    }
+
+    .td_netpay {
+      width: 5%;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .loads_header {
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+    .loads_header__right {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .loads_header_left {
+      width: 100%;
+      .total_miles {
+        order: 2;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../lib/style-utils";
+
+.rate_miles__input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .form-control {
+    width: 45%;
+  }
+
+  button {
+    font-size: 20px;
+    color: white;
+    margin: 0px 3px 0px 3px;
+    padding: 7px;
+    align-self: flex-end;
+    border: none;
+    border-radius: 3px;
+    background-color: $colorHeaderNavigationLinks;
+
+    &:hover {
+      background-color: $primaryBtnColor;
+    }
+  }
+}
+
+.load-form {
+  //border: 1px solid $greyColor;
+  box-shadow: $boxShadowParams;
+  max-width: 350px;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  label {
+    display: inline-block;
+    margin: 10px 0;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    border: $borderGreyColor;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+  }
+}
+
+.button {
+  @include primaryButtonStyle();
+}
+
+.btn_location {
+  border: none;
+  width: 40px;
+  text-align: center;
+  border-radius: 7px;
+  color: $colorHeaderNavigationLinks;
+  align-items: center;
+  font-size: 20px;
+
+  &:hover {
+    color: $primaryBtnColor;
+    cursor: pointer;
+  }
+}
+
+.from-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  .location_icon {
+    position: absolute;
+    right: 5px;
+  }
+
+  .from_input {
+    position: relative;
+  }
+}
